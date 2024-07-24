@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="page-headers">
+        <h2>Ingredients</h2>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" #searchBox id="search-box"
+                (keyup.enter)="search(searchBox.value)" name="search" [(ngModel)]="searchTerm" />
+            <button type="button" class="btn btn-outline-secondary">Search</button>
+        </form>
+        <a [routerLink]="['/ingredients/add']" type="button" class="btn btn-success">Add</a>
+    </div>
+    <ul class="list-layout">
+        <li class="list-items" *ngFor="let ingredient of ingredients">
+            <div class="card">
+                <img src="assets/placeholder-image.png">
+                <div class="card-body">
+                    <h5 class="card-title">{{ingredient.name}}</h5>
+                    <p>{{ingredient.kj}}kj per {{ingredient.unit}}</p>
+                    <div class="action-bar">
+                        <a [routerLink]="['/ingredients/edit', ingredient.id]" class="icons" class="action-icon"><img
+                                src="assets/edit.svg"></a>
+                        <a [routerLink]="['/ingredients/delete', ingredient.id]" class="icons" class="action-icon"><img
+                                src="assets/delete.svg"></a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

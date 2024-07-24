@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="page-headers">
+        <h2>Recipes</h2>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button type="button" class="btn btn-outline-secondary">Search</button>
+        </form>
+        <!-- <a href="/recipe/add" class="btn btn-success">Add</a> -->
+    </div>
+    <ul class="list-layout">
+        <li class="list-items" *ngFor="let recipe of recipes">
+            <a href="/recipe/view/{{recipe.id}}" class="card">
+                <img src="assets/placeholder-image.png">
+                <div class="card-body">
+                    <h5 class="card-title">{{recipe.name}}</h5>
+                    <!-- <a class="action-icon" href="/recipe/edit/1"> <img src="assets/edit.svg"></a>
+                    <a class="action-icon" href="/recipe/delete/1"><img src="assets/delete.svg"></a> -->
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>

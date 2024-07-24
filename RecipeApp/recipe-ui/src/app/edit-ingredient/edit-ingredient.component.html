@@ -1,0 +1,27 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title">Edit Ingredient</h5>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="mb-3">
+                <div class="image-container">
+                    <button class="upload-section" id="edit-image-button">
+                        <img class="upload-section" src="assets/placeholder-image.png">
+                    </button>
+                </div>
+                <input class="form-control" placeholder="Ingredient name" [(ngModel)]="this.name" name="name">
+
+                <div class="unit-measure">
+                    <input class="form-control" placeholder="0" [(ngModel)]="this.kj" name="kj">
+                    <p id="kj-text"> kilojoules per </p>
+                    <input class="form-control" placeholder="unit" [(ngModel)]="this.unit" name="unit">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="close()">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="editIngredient()">Save</button>
+    </div>
+</div>

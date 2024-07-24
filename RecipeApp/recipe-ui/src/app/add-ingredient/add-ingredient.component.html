@@ -1,0 +1,30 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Ingredient</h5>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="mb-3">
+                <div class="image-container">
+                    <button class="upload-section">
+                        <p>Upload Image</p><img src="assets/upload.svg" width="30px">
+                    </button>
+                </div>
+                <input id="ingredientName" #ingredientName class="form-control" placeholder="Ingredient name">
+                <div class="unit-measure">
+                    <input type="number" id="ingredientKilojoules" #ingredientKilojoules class="form-control"
+                        placeholder="0">
+                    <p id="kj-text"> kilojoules per </p>
+
+                    <input id="ingredientUnit" #ingredientUnit class="form-control" placeholder="unit">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <p>{{error}}</p>
+        <button type="button" class="btn btn-secondary" (click)="close()">Cancel</button>
+        <button type="button" class="btn btn-primary"
+            (click)="createIngredient(ingredientName.value,ingredientKilojoules.valueAsNumber, ingredientUnit.value)">Save</button>
+    </div>
+</div>

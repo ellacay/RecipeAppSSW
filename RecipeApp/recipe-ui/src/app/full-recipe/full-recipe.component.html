@@ -1,0 +1,24 @@
+<div class="full-recipe">
+    <div class="full-recipe-card">
+        <h1 id="recipe-title">{{this.recipe?.name}}</h1>
+        <div class="recipe-content">
+
+            <img id="recipe-image" src="assets/placeholder-image.png">
+            <div class="content-segment">
+                <h2>Ingredients</h2>
+                <ul>
+                    <li><a>Roast Beef</a></li>
+                </ul>
+            </div>
+            <div class="content-segment">
+                <h2>Instructions</h2>
+                <p>{{this.recipe?.instructions}}</p>
+            </div>
+        </div>
+        <!-- <div class="action-bar recipe-buttons">
+            <a class="action-icon "><img src="assets/edit.svg"></a>
+            <a class="action-icon "><img src="assets/delete.svg"></a>
+        </div> -->
+    </div>
+    <app-recipe-list></app-recipe-list>
+</div>
